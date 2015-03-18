@@ -1,7 +1,7 @@
-var EmployeeView = function(employee) {
+var branchView = function(branch) {
 	
 	this.render = function() {
-		this.el.html( EmployeeView.template(employee) );
+		this.el.html( branchView.template(branch) );
 		return this;
 	};
 	
@@ -23,10 +23,10 @@ var EmployeeView = function(employee) {
 		
 		// Create Contact
 		var contact = navigator.contacts.create();
-		contact.displayName = employee.firstName;
-		contact.nickname = employee.firstname;
+		contact.displayName = branch.firstName;
+		contact.nickname = branch.firstname;
 		var name = new ContactName();
-		name = {givenName: employee.firstName, familyName: employee.lastName};
+		name = {givenName: branch.firstName, familyName: branch.lastName};
 		contact.name = name;
 		
 		// Save Contact
@@ -54,7 +54,7 @@ var EmployeeView = function(employee) {
 		};
 		navigator.camera.getPicture(
 			function(imageData) {
-				$('.employee-image', this.el).attr('src', "data:image/jpeg;base64," + imageData);
+				$('.branch-image', this.el).attr('src', "data:image/jpeg;base64," + imageData);
 			},
 			function() {
 				app.showAlert('Error taking picture', 'Error');
@@ -74,4 +74,4 @@ var EmployeeView = function(employee) {
 	
 }
 
-EmployeeView.template = Handlebars.compile( $("#employee-tpl").html() );
+branchView.template = Handlebars.compile( $("#branch-tpl").html() );

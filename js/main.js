@@ -83,17 +83,17 @@ var app = {
 		}
 		var match = hash.match( app.detailsURL );
 		if (match) {
-			this.store.findById( Number(match[1]), function(employee) {
-				self.slidePage( new EmployeeView(employee).render() );
+			this.store.findById( Number(match[1]), function(branch) {
+				self.slidePage( new branchView(branch).render() );
 			});
 		}
 	},
 	
 	initialize: function() {
 		var self = this;
-		this.detailsURL = /^#employees\/(\d{1,})/;
+		this.detailsURL = /^#branches\/(\d{1,})/;
 		this.registerEvents();
-		this.store = new MemoryStore(function() {
+		this.store = new LocalStorageStore(function() {
 			self.route();
 		});
 		//self.showAlert("Test", "Done");

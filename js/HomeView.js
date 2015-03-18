@@ -1,14 +1,10 @@
 var HomeView = function(store) {
 	
 	this.findByName = function() {
-        store.findByName( $('.search-key').val(), function(employees) {
-        	$(".employee-list").html( HomeView.liTemplate(employees) );
+        store.findByName( $('.search-key').val(), function(branches) {
+        	$(".branch-list").html( HomeView.liTemplate(branches) );
         } );
     };
-	
-	this.displayName = function() {
-		//app.showAlert("Hello World", "Hope all is well!");
-	};
 	
 	this.initialize = function() {
 		this.el = $('<div/>');
@@ -25,4 +21,4 @@ var HomeView = function(store) {
 }
 
 HomeView.template = Handlebars.compile( $("#home-tpl").html() );
-HomeView.liTemplate = Handlebars.compile( $("#employee-li-tpl").html() );
+HomeView.liTemplate = Handlebars.compile( $("#branch-li-tpl").html() );

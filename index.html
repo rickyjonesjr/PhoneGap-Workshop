@@ -10,39 +10,42 @@
 	<script id="home-tpl" type="text/x-handlebars-template">
 		<div class="header"><h1>Home</h1></div>
 		<div class="search-bar"><input class="search-key" type="search" /></div>
-		<div class="scroll"><ul class="employee-list"></ul></div>
+		<div class="scroll"><ul class="branch-list"></ul></div>
 	</script>
     
-    <script id="employee-li-tpl" type="text/x-handlebars-template">
+    <script id="branch-li-tpl" type="text/x-handlebars-template">
 		{{#.}}
-		<li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}<br/>{{this.title}}</a></li>
+		<li><a href="#branches/{{this.id}}"><strong>{{this.name}}</strong><br/>{{this.address}}, {{this.city}}, {{this.state}} {{this.postal}}</a></li>
         {{/.}}
 	</script>
     
-    <script id="employee-tpl" type="text/x-handlebars-template">
-		<div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
-		<div class='details'>
-			<img class='employee-image' src='img/{{firstName}}_{{lastName}}.jpg' />
-			<h1>{{firstName}} {{lastName}}</h1>
-			<h2>{{title}}</h2>
-			<span class="location"></span>
-			<ul>
+    <script id="branch-tpl" type="text/x-handlebars-template">
+		<div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Branch Details</h1></div>
+		<div class="details">
+			<iframe src="https://www.google.com/maps/embed/v1/place?key=912624556099-s1egks0n37oc7vjuq44pm0tbg2uqmhc0.apps.googleusercontent.com&q=Kinecta+Federal+Credit+Union,{{city}}+{{state}}" width="100%" height="200" frameborder="0" style="border:0"></iframe>
+			<div class="content">
+				<h1>{{name}}</h1>
+				<p><em>{{public}}</em></p>
+				<p>{{address}}<br/>
+					{{city}}, {{state}} {{postal}}</p>
+				<p><strong>Hours of Operation:</strong><br/>
+					{{hours1}}<br/>
+					{{hours2}}<br/>
+					{{hours3}}</p>
+			</div>
+			<ul class="action-items">
 				<li><a href="tel:{{officePhone}}">Call Office<br/>{{officePhone}}</a></li>
-				<li><a href="tel:{{cellPhone}}">Call Cell<br/>{{cellPhone}}</a></li>
-				<li><a href="sms:{{cellPhone}}">SMS<br/>{{cellPhone}}</a></li>
-				<li><a href="#" class="add-location-btn">Add Location</a></li>
-				<li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
-				<li><a href="#" class="change-pic-btn">Change Picture</a></li>
+				<li><a href="#">View Map</a></li>
 			</ul>
 		</div>
 	</script>
     
     <script src="phonegap.js"></script>
     <script src="lib/jquery-1.8.2.min.js"></script>
-    <script src="js/storage/memory-store.js"></script>
+    <script src="js/storage/ls-store.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="js/HomeView.js"></script>
-    <script src="js/EmployeeView.js"></script>
+    <script src="js/branchView.js"></script>
     <script src="js/main.js"></script>
 
 </body>
