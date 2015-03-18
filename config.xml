@@ -4,7 +4,7 @@
     	xmlns:android   = "http://schemas.android.com/apk/res/android"
         id          	= "es.rickyjon.test"
         versionCode 	= "10"
-        version     	= "1.1.1">
+        version     	= "1.1.2">
  
     <name>Employee Directory</name>
  
