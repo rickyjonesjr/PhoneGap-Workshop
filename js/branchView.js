@@ -111,7 +111,7 @@ var branchView = function(branch) {
 	
 	this.initialize = function() {
 		this.el = $('<div/>');
-		this.el.on('click', '.get-directions-btn', this.openGoogleMaps);
+		this.el.on('click', '.get-directions-btn', this.getDirections);
 		this.el.on('click', '.add-contact-btn', this.addToContacts);
 		this.el.on('click', '.change-pic-btn', this.changePicture);
 	};
