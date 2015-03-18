@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background: #666;
+    background: #949ca1;
     -webkit-background-size: 1px 44px;
     -moz-background-size: 1px 44px;
     -ms-background-size: 1px 44px;
@@ -56,29 +56,28 @@ body {
 
 .search-bar {
     background: #ccc;
-    height: 32px;
-    padding-left:6px;
-    padding-right: 6px;
-    padding-top: 6px;
-    margin-bottom: 6px;
-    border-bottom: solid 1px #666;
+    height: 38px;
+    padding: 6px 6px 0 6px;
 }
 
 input[type="search"] {
     width:100%;
+	height: 30px;
+	line-height: 30px;
 	border: none;
-	border-radius: 4px;
-	padding: 4px 0px 2px 2px;
+	padding: 0 10px;
 	margin-top: 0px;
 	font-size: 16px;
-	box-shadow: inset 0 2px 2px rgba(0,0,0,.5), 0 1px #fff;
-	background: #eee;
+	background: #fff;
     -webkit-appearance:none;
 }
 
 input[type="search"]:focus {
 	outline: none;
-	box-shadow: inset 0 4px 8px rgba(0,0,0,.5), 0 1px #fff;
+}
+
+.content {
+	color:#3b4b5b;
 }
 
 ul {
@@ -118,9 +117,7 @@ li {
 }
 
 li>a {
-    color: #000;
     display: block;
-    padding: 5px;
     text-decoration: none;
     width: 100%;
     -webkit-box-flex: 1;
@@ -129,13 +126,15 @@ li>a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-position: -10px 0;
-    background-repeat: no-repeat;
-    -webkit-background-size: 10px 100%;
-    -moz-background-size: 10px 100%;
-    -ms-background-size: 10px 100%;
-    -o-background-size: 10px 100%;
-    background-size: 10px 100%;
+	padding: 3%;
+	color:#3b4b5b;
+}
+
+.action-items li>a {
+	background: #7399c6;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 li>a * {
@@ -170,7 +169,7 @@ li>a * {
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 24px;
     padding: 20 0 0 0;
     margin: 0px;
 }
@@ -193,7 +192,7 @@ h2 {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: absolute;
-    top: 84px;
+    top: 89px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -231,5 +230,13 @@ li>a.tappable-active {
 }
 
 .details .content {
-	padding: 5%;	
+	padding: 3%;	
+}
+
+.icon_coop {
+	background: url(../img/icon_coop.png) no-repeat left top;
+	display: block;
+	width: 30px;
+	height: 26px;
+	float: right;	
 }
