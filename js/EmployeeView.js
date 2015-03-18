@@ -20,19 +20,25 @@ var EmployeeView = function(employee) {
 	
 	this.addToContacts = function(event) {
 		event.preventDefault();
-		console.log('addToContacts');
-		if(!navigator.contacts) {
-			app.showAlert("Contacts API not supported", "Error");
-			return;	
-		}
+		
+		// Create Contact
 		var contact = navigator.contacts.create();
-		contact.name = {givenName: employee.firstName, familyName: employee.lastName};
-		var phoneNumbers = [];
-		phoneNumbers[0] = new ContactField('work', employee.officePhone, false);
-		phoneNumbers[1] = new ContactField('mobile', employee.cellPhone, true); //preferred number
-		contact.phoneNumbers = phoneNumbers;
-		contact.save();
-		return false;
+		contact.displayName = employee.firstName;
+		contact.nickname = employee.firstname;
+		var name = new ContactName();
+		name = {givenName: employee.firstName, familyName: employee.lastName};
+		contact.name = name;
+		
+		// Save Contact
+		contact.save(onSaveSuccess,onSaveError);
+	};
+	
+	this.onSaveSuccess = function(contact) {
+		app.showAlert(contact.displayName + " has been saved to your contacts.");	
+	};
+	
+	this.onSaveError = function(contactError) {
+		app.showAlert("Error: " + contactError.code);	
 	};
 	
 	this.changePicture = function(event) {
