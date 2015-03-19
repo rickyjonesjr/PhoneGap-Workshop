@@ -30,5 +30,8 @@
 	<gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
 	<gap:splash src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
 	<gap:splash src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+	
+	<access origin="http://maps.google.com"/>
+    <access origin="http://maps.googleapis.com"/>
  
 </widget>

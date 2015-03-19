@@ -55,13 +55,14 @@ var branchView = function(branch) {
 		this.el.on('click', '.get-directions-btn', this.getDirections);
 		this.el.on('click', '.add-contact-btn', this.addToContacts);
 		this.el.on('click', '.change-pic-btn', this.changePicture);
-		var latLong = new google.maps.LatLng(branch.lat, branch.lng);
+		app.showAlert(google);
+		/*var latLong = new google.maps.LatLng(branch.lat, branch.lng);
 		var mapOptions = {
 			center: latLong,
 			zoom: 16,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);*/
 	};
 	
 	this.initialize();
