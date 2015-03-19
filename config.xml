@@ -25,7 +25,7 @@
     <feature name="http://api.phonegap.com/1.0/notification"/>
 	
 	<icon src="icon.png" />
-	<gap:splash src="splash.png" /
+	<gap:splash src="splash.png" />
 	<gap:splash src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
 	<gap:splash src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
 	<gap:splash src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
