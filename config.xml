@@ -6,10 +6,10 @@
         versionCode 	= "10"
         version     	= "1.1.2">
  
-    <name>Employee Directory</name>
+    <name>Find Kinecta</name>
  
     <description>
-        A simple employee directory application
+        A simple Kinecta branch locator application
     </description>
  
     <author href="http://rickyjon.es" email="support@rickyjon.es">

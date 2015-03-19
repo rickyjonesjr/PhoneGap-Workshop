@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #fff;
+    background: url(../img/bg-page.gif);
     overflow: hidden;
     position: relative;
 }
@@ -74,6 +74,28 @@ input[type="search"]:focus {
 	outline: none;
 }
 
+input[type="search"]::-webkit-input-placeholder {  
+   font-style: italic;
+}
+
+input[type="search"]:-moz-placeholder {  
+   font-style: italic;
+}
+
+input[type="search"]::-moz-placeholder {  
+   font-style: italic;
+}
+
+input[type="search"]:-ms-input-placeholder {  
+   font-style: italic;
+}
+
+.container {
+	background-color: #fff;
+	border-bottom: 1px solid #828a8f;
+	padding-bottom: 1px;
+}
+
 .content {
 	color:#3b4b5b;
 }
@@ -83,7 +105,6 @@ ul {
     padding: 0;
     list-style: none;
     background-color: #fafafa;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 ul.branch-list {
@@ -113,6 +134,11 @@ li>a {
 	color:#3b4b5b;
 }
 
+.branch-list li>a strong {
+	font-size: 18px;
+	line-height: 24px;	
+}
+
 .action-items li>a {
 	background: #7399c6;
 	color: #fff;
@@ -125,7 +151,6 @@ li>a * {
 }
 
 .button {
-	background-color:#5f9baf;
 	border:1px solid rgba(255,255,255,0.5);
 	display:inline-block;
 	color:#fff;
@@ -135,8 +160,6 @@ li>a * {
 
 .button:hover {
 	border: 1px solid #fff;
-	background-color: #fff;
-	color: #5f9baf;
 }
 
 h1 {
@@ -169,9 +192,13 @@ h2 {
     right: 0px;
 }
 
-li>a.tappable-active {
+.branch-list li>a.tappable-active {
+    background-color: #ddd;
+}
+
+.action-items li>a.tappable-active {
     color: #fff;
-    background-color: #4286f5;
+    background-color: #3b6e8f;
 }
 
 .page {
@@ -210,4 +237,9 @@ li>a.tappable-active {
 	width: 30px;
 	height: 26px;
 	float: right;	
+}
+
+#map {
+	width: 100%;
+	height: 300px;
 }
